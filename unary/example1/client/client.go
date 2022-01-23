@@ -11,12 +11,13 @@ const (
 	address = "0.0.0.0:50051"
 )
 
-func makeUnaryCall(c greetpb.GreetServiceClient) {	req := &greetpb.GreetRequest{
-	Greeting: &greetpb.Greeting{
-		FirstName: "shivanshu",
-		LastName: "shrivastava",
-	},
-}
+func makeUnaryCall(c greetpb.GreetServiceClient) {
+	req := &greetpb.GreetRequest{
+		Greeting: &greetpb.Greeting{
+			FirstName: "shivanshu",
+			LastName: "shrivastava",
+		},
+	}
 	res, err := c.Greet(context.Background(), req)
 	if err != nil {
 		log.Fatalf("Error occured, %v", err)

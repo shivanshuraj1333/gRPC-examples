@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package unary;
+
+option go_package="unary/example3/proto";
+
+message Add {
+  int64 val1 = 1;
+  int64 val2 = 2;
+}
+
+message Request {
+  Add add = 1;
+}
+
+message Response {
+  int64 res = 1;
+}
+
+service CalService {
+  rpc AddNumbers(Request) returns (Response) {};
+}
