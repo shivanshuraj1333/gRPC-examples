@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
-	"example.com/go-usermgmt-grpc/unary/greetpb"
 	"fmt"
+	"github.com/shivanshu1333/gRPC-examples/unary/example1/greetpb"
 	"google.golang.org/grpc"
 	"log"
 	"net"
