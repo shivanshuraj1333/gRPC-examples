@@ -14,23 +14,6 @@ type server struct{
 	proto.UnimplementedStreamServiceServer
 }
 
-//func (s *server) Stream(req *proto.StreamRequest, stream proto.StreamService_StreamServer) error {
-//	fmt.Printf("Received a streaming request %v\n", req)
-//	videoName := req.GetStream().GetVideoName()
-//	for i := 0; i < 10; i++ {
-//		result := "Started streaming service " + videoName + " res id: " + strconv.Itoa(i)
-//		res := &proto.StreamResponse{
-//			Result: result,
-//		}
-//		err := stream.Send(res)
-//		if err != nil {
-//			return err
-//		}
-//		time.Sleep(100 * time.Millisecond)
-//	}
-//	return nil
-//}
-
 func (s *server) Stream(req *proto.Request, stream proto.StreamService_StreamServer) error {
 	fmt.Printf("Received a streaming request %v\n", req)
 	num := req.GetRequest().GetValue()
