@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package ServerStreaming;
+
+option go_package="ServerStreaming/primeNumberDecomposition/proto";
+
+message Number {
+  int64 value = 1;
+}
+
+message Request {
+  Number request = 1;
+}
+
+message Response {
+  string result = 1;
+}
+
+service StreamService {
+  rpc Stream(Request) returns (stream Response) {};
+}
