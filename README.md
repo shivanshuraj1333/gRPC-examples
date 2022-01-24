@@ -89,3 +89,10 @@ this repository containes basic to advance exmples of gRPC, covering Unary, Serv
 ├── go.mod
 └── go.sum
 ```
+1. typed of APIs:
+    1. Unary: 1 req - 1 res
+    2. Server Streaming: 1 req - n res
+    3. Client Streaming: n req - 1 res
+    4. Bi Directional Streaming: n req - n res
+2. Security as a first class citizen
+3. Easy and understandable status codes https://grpc.github.io/grpc/core/md_doc_statuscodes.html
