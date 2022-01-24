@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package ClientStreaming;
+
+option go_package="ClientStreaming/computeAverageApi/proto";
+
+message Compute {
+  int64 val = 1;
+}
+
+message Request {
+  Compute value = 1;
+}
+
+message Response {
+  string result = 1;
+}
+
+
+service ComputeService{
+  // Client Streaming
+  rpc Compute(stream Request) returns (Response) {};
+}
