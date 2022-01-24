@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package ClientStreaming;
+
+option go_package="BiDirectionalStreaming/findMaximumApi/proto";
+
+message Number {
+  int64 val = 1;
+}
+
+message Request {
+  Number value = 1;
+}
+
+message Response {
+  int64 result = 1;
+}
+
+service MaximumApi{
+  // BiDi Streaming
+  rpc findMaximum(stream Request) returns (stream Response) {};
+}
