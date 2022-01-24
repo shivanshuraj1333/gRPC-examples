@@ -2,21 +2,20 @@ syntax = "proto3";
 
 package ServerStreaming;
 
-option go_package="Unary/greetingService/greetpb";
+option go_package="ServerStreaming/videoStreaming/proto";
 
-message Greeting {
-  string first_name = 1;
-  string last_name = 2;
+message VideoName {
+  string video_name = 1;
 }
 
-message GreetRequest {
-  Greeting greeting = 1;
+message StreamRequest {
+  VideoName stream = 1;
 }
 
-message GreetResponse {
+message StreamResponse {
   string result = 1;
 }
 
-service GreetService {
-  rpc Greet(GreetRequest) returns (GreetResponse) {};
+service StreamService {
+  rpc Stream(StreamRequest) returns (stream StreamResponse) {};
 }
