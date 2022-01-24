@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.27.1
 // 	protoc        v3.17.3
-// source: unary/CalculatorService/proto/calc.proto
+// source: Unary/CalculatorService/proto/calc.proto
 
 package proto
 
@@ -204,14 +204,14 @@ func file_unary_example3_proto_calc_proto_rawDescGZIP() []byte {
 
 var file_unary_example3_proto_calc_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_unary_example3_proto_calc_proto_goTypes = []interface{}{
-	(*Add)(nil),      // 0: unary.Add
-	(*Request)(nil),  // 1: unary.Request
-	(*Response)(nil), // 2: unary.Response
+	(*Add)(nil),      // 0: Unary.Add
+	(*Request)(nil),  // 1: Unary.Request
+	(*Response)(nil), // 2: Unary.Response
 }
 var file_unary_example3_proto_calc_proto_depIdxs = []int32{
-	0, // 0: unary.Request.add:type_name -> unary.Add
-	1, // 1: unary.CalService.AddNumbers:input_type -> unary.Request
-	2, // 2: unary.CalService.AddNumbers:output_type -> unary.Response
+	0, // 0: Unary.Request.add:type_name -> Unary.Add
+	1, // 1: Unary.CalService.AddNumbers:input_type -> Unary.Request
+	2, // 2: Unary.CalService.AddNumbers:output_type -> Unary.Response
 	2, // [2:3] is the sub-list for method output_type
 	1, // [1:2] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

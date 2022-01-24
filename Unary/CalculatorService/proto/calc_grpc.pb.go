@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.17.3
-// source: unary/CalculatorService/proto/calc.proto
+// source: Unary/CalculatorService/proto/calc.proto
 
 package proto
 
@@ -35,7 +35,7 @@ func NewCalServiceClient(cc grpc.ClientConnInterface) CalServiceClient {
 
 func (c *calServiceClient) AddNumbers(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/unary.CalService/AddNumbers", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/Unary.CalService/AddNumbers", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -80,7 +80,7 @@ func _CalService_AddNumbers_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/unary.CalService/AddNumbers",
+		FullMethod: "/Unary.CalService/AddNumbers",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CalServiceServer).AddNumbers(ctx, req.(*Request))
@@ -92,7 +92,7 @@ func _CalService_AddNumbers_Handler(srv interface{}, ctx context.Context, dec fu
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CalService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "unary.CalService",
+	ServiceName: "Unary.CalService",
 	HandlerType: (*CalServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -101,5 +101,5 @@ var CalService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "unary/CalculatorService/proto/calc.proto",
+	Metadata: "Unary/CalculatorService/proto/calc.proto",
 }

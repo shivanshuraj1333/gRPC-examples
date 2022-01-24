@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package gRPC;
 
-option go_package = "unary/UserManagementService/usermgmt";
+option go_package = "Unary/UserManagementService/usermgmt";
 
 service UserManagement {
   rpc CreateNewUser (NewUser) returns (User) {}

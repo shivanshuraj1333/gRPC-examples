@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.27.1
 // 	protoc        v3.17.3
-// source: unary/greetpb/greet.proto
+// source: Unary/greetpb/greet.proto
 
 package greetpb
 
@@ -207,14 +207,14 @@ func file_unary_greetpb_greet_proto_rawDescGZIP() []byte {
 
 var file_unary_greetpb_greet_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_unary_greetpb_greet_proto_goTypes = []interface{}{
-	(*Greeting)(nil),      // 0: unary.Greeting
-	(*GreetRequest)(nil),  // 1: unary.GreetRequest
-	(*GreetResponse)(nil), // 2: unary.GreetResponse
+	(*Greeting)(nil),      // 0: Unary.Greeting
+	(*GreetRequest)(nil),  // 1: Unary.GreetRequest
+	(*GreetResponse)(nil), // 2: Unary.GreetResponse
 }
 var file_unary_greetpb_greet_proto_depIdxs = []int32{
-	0, // 0: unary.GreetRequest.greeting:type_name -> unary.Greeting
-	1, // 1: unary.GreetService.Greet:input_type -> unary.GreetRequest
-	2, // 2: unary.GreetService.Greet:output_type -> unary.GreetResponse
+	0, // 0: Unary.GreetRequest.greeting:type_name -> Unary.Greeting
+	1, // 1: Unary.GreetService.Greet:input_type -> Unary.GreetRequest
+	2, // 2: Unary.GreetService.Greet:output_type -> Unary.GreetResponse
 	2, // [2:3] is the sub-list for method output_type
 	1, // [1:2] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

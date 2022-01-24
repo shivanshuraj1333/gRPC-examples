@@ -3,20 +3,21 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/shivanshu1333/gRPC-examples/unary/CalculatorService/proto"
+	"github.com/shivanshu1333/gRPC-examples/Unary/GreetService/greetpb"
 	"google.golang.org/grpc"
 	"log"
 	"net"
 )
 
 type server struct{
-	proto.UnimplementedCalServiceServer
+	greetpb.UnimplementedGreetServiceServer
 }
 
-func (s *server) AddNumbers(ctx context.Context, req *proto.Request) (*proto.Response, error) {
-	value := req.Add.GetVal1() + req.Add.GetVal2()
-	res := &proto.Response{
-		Res: value,
+func (*server) Greet(ctx context.Context, req *greetpb.GreetRequest) (*greetpb.GreetResponse, error) {
+	firstName := req.GetGreeting().GetFirstName()
+	result := "Hello " + firstName
+	res := &greetpb.GreetResponse{
+		Result: result,
 	}
 	return res, nil
 }
@@ -31,7 +32,7 @@ func main() {
 	}
 
 	s := grpc.NewServer()
-	proto.RegisterCalServiceServer(s, &server{})
+	greetpb.RegisterGreetServiceServer(s, &server{})
 
 	if err := s.Serve(lis); err != nil {
 		log.Fatal("Failed to serve: %v", err)

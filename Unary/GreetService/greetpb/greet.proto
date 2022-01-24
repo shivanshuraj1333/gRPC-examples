@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package unary;
 
-option go_package="unary/GreetService/greetpb";
+option go_package="Unary/GreetService/greetpb";
 
 message Greeting {
   string first_name = 1;

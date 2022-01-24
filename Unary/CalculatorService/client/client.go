@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"github.com/shivanshu1333/gRPC-examples/unary/CalculatorService/proto"
+	"github.com/shivanshu1333/gRPC-examples/Unary/CalculatorService/proto"
 	"google.golang.org/grpc"
 	"log"
 )
