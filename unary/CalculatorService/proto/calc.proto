@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package unary;
 
-option go_package="unary/example3/proto";
+option go_package="unary/CalculatorService/proto";
 
 message Add {
   int64 val1 = 1;

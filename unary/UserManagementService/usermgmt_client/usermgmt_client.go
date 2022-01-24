@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	pb "github.com/shivanshu1333/gRPC-examples/unary/example2/usermgmt"
+	pb "github.com/shivanshu1333/gRPC-examples/unary/UserManagementService/usermgmt"
 	"google.golang.org/grpc"
 )
 const (

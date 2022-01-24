@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.17.3
-// source: unary/example3/proto/calc.proto
+// source: unary/CalculatorService/proto/calc.proto
 
 package proto
 
@@ -101,5 +101,5 @@ var CalService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "unary/example3/proto/calc.proto",
+	Metadata: "unary/CalculatorService/proto/calc.proto",
 }

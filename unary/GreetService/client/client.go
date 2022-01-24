@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"github.com/shivanshu1333/gRPC-examples/unary/example1/greetpb"
+	"github.com/shivanshu1333/gRPC-examples/unary/GreetService/greetpb"
 	"google.golang.org/grpc"
 	"log"
 )

@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/shivanshu1333/gRPC-examples/unary/example3/proto"
+	"github.com/shivanshu1333/gRPC-examples/unary/CalculatorService/proto"
 	"google.golang.org/grpc"
 	"log"
 	"net"
