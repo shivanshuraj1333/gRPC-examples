@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package ClientStreaming;
+
+option go_package="BiDirectionalStreaming/GreetEveryone/proto";
+
+message Greeting {
+  string first_name = 1;
+  string last_name = 2;
+}
+
+
+message GreetEveryoneRequest {
+  Greeting greeting = 1;
+}
+
+message GreetEveryoneResponse {
+  string result = 1;
+}
+
+service GreetService{
+  // BiDi Streaming
+  rpc GreetEveryone(stream GreetEveryoneRequest) returns (stream GreetEveryoneResponse) {};
+}
