@@ -1,5 +1,6 @@
 # gRPC-examples
 this repository containes basic to advance exmples of gRPC, covering Unary, Server Streaming, Client Streaming, Bi Directional Streaming
+all the gRPC examples are in go
 ```
 |── BiDirectionalStreaming
 │   ├── GreetEveryone
